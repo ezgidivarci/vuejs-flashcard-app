@@ -32,6 +32,7 @@ export default {
                     </label>
                     <button @click= "$emit('delete-card-item', item)" class="float-right rounded-xl text-white bg-pink-400 m-2 px-2 py-1"> delete</button>
                 </form>
+               <!-- <p> {{ item.question }} {{ item.answer}} </p> -->
         </div>
       
    

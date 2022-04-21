@@ -8,6 +8,8 @@ export default {
     AddSection,
     CardList,
     ResultBar,
+
+   
   },
 
   data() {
@@ -27,6 +29,8 @@ export default {
     ];
   }, */
 
+
+
   methods: {
     addNewCard(questioninput, answerinput) {
       //console.log("inputlarım:" , event ,data);
@@ -44,17 +48,44 @@ export default {
       }
     },
 
-  }
+    /* prefs(cardList) {
+      var p = {
+        storedq : this.cardList.question,
+        storeda : this.cardList.answer
+      };
+
+      return p;
+    } */
+
+  },
+
+  /* computed: {
+    prefs(cardList) {
+      
+        storedq : this.cardList.question,
+        storeda : this.cardList.answer
+      
+
+      return p;
+    }
+  } */
+
+
+
 }
 </script>
 
 <template>
+<div>
   
   <AddSection @add-card="addNewCard"/>
   <CardList @delete-card-item="deleteItem" :myData="cardList"> </CardList>
   <!--<CardList :myData="cardList"> </CardList> -->
   <ResultBar :itemCount="cardList.length"/>
   
+  <!--<p> prefs : {{ prefs }}</p>
+  <p> card list: {{ cardList.answer }} </p> -->
+</div>
   
 </template>
 
